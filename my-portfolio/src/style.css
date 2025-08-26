@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header and Navigation Styles */
+header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff; /* A nice blue color for hover effect */
+}
+
+/* Main Content Styling */
+main {
+  padding: 2rem;
+  min-height: 80vh; /* Ensures the footer stays at the bottom on short pages */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #e9ecef; /* A light background color */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Add some basic responsiveness */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .hero-content {
+    max-width: 50%;
+  }
+  .hero-image {
+    max-width: 40%;
+  }
+  .hero-image img {
+    width: 100%;
+    border-radius: 50%; /* Make the image a circle */
+  }
+}
+
+/* About Section Styles */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  max-width: 800px;
+  text-align: center;
+}
+
+.skills-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skills-list ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.skills-list li {
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  white-space: nowrap; /* Prevents text from wrapping on smaller screens */
+}
+
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .about-content {
+    text-align: left;
+    max-width: 50%;
+  }
+
+  .skills-list {
+    text-align: left;
+    max-width: 40%;
+  }
+
+  .skills-list ul {
+    justify-content: flex-start;
+  }
+}
+
+/* Projects Section Styles */
+.projects-container {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa; /* A subtle background color */
+  text-align: center;
+}
+
+.projects-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card Styles */
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover;
+}
+
+.project-details {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-details p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto; /* Pushes the links to the bottom */
+}
+
+.live-demo-button,
+.github-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.live-demo-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.live-demo-button:hover {
+  background-color: #0056b3;
+}
+
+.github-button {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.github-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Contact Section Styles */
+.contact-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #e9ecef;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-container p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.email-link {
+  background-color: #333;
+  color: #fff;
+}
+
+.email-link:hover {
+  background-color: #555;
+}
+
+.linkedin-link {
+  background-color: #0e76a8;
+  color: #fff;
+}
+
+.linkedin-link:hover {
+  background-color: #0a638c;
+}
+
+.github-link {
+  background-color: #24292e;
+  color: #fff;
+}
+
+.github-link:hover {
+  background-color: #40464d;
+}
